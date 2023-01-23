@@ -2,8 +2,14 @@ FROM node:latest
 
 WORKDIR /home/node
 
-COPY . . 
+COPY package.json ./
 
 RUN npm install -f
 
-CMD ["npm","run","dev"]
+RUN npm install -g nodemon
+
+COPY . . 
+
+ARG port
+
+EXPOSE $port

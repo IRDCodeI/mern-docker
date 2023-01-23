@@ -1,21 +1,21 @@
 import axios from "axios";
 
 export const getTasksRequest = async () =>
-  await axios.get("http://172.19.0.3:4000/tasks");
+  await axios.get("http://192.168.50.20:3000/tasks");
 
 export const createTaskRequest = async (task) =>
-  await axios.post("http://172.19.0.3:4000/tasks", task);
+  await axios.post("http://192.168.50.20:3000/tasks", task);
 
 export const deleteTaskRequest = async (id) =>
-  await axios.delete(`http://172.19.0.3:4000/tasks/${id}`);
+  await axios.delete(`http://192.168.50.20:3000/tasks/${id}`);
   
 export const getTaskRequest = async (id) =>
-  await axios.get(`http://172.19.0.3:4000/tasks/${id}`);
+  await axios.get(`http://192.168.50.20:3000/tasks/${id}`);
 
 export const updateTaskRequest = async (id, newFields) =>
-  await axios.put(`http://172.19.0.3:4000/tasks/${id}`, newFields);
+  await axios.put(`http://192.168.50.20:3000/tasks/${id}`, newFields);
 
 export const toggleTaskDoneRequest = async (id, done) =>
-  await axios.put(`http://172.19.0.3:4000/tasks/${id}`, {
+  await axios.put(`http://192.168.50.20:3000/tasks/${id}`, {
     done,
   });

@@ -1,5 +1,0 @@
-FROM mysql:latest
-
-ENV MYSQL_ROOT_PASSWORD root123
-
-EXPOSE 3306
