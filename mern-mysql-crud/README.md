@@ -80,7 +80,7 @@ docker pull node
 ```
 docker build -t frontend --build-arg port=4000 .
 
-docker run -itd --name FrontApp --network RedDocker --ip 192.168.50.30 -e IP_API=192.168.50.20 -e PORT_API=3000 -e PORT=4000 -p 4000:4000 frontend npm run dev
+docker run -itd --name FrontApp --network RedDocker --ip 192.168.50.30 -e PORT=4000 -p 4000:4000 frontend npm run dev
 ```
 Editar `src/api/tasks.api.js`  con las direcciones IP de la API que se asigno previamente. Ingresadno al modo iteractivo de docker `docker exec -it ...`
 
